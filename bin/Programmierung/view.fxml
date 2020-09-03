@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.media.MediaView?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="Programmierung.Controller">
+	<children>
+		<TextArea fx:id="eingabefeld" />
+		<Button fx:id="press" onAction="#pressed" />
+		<Button  onAction="#pressedtonewpage" />
+		<MediaView fx:id="mediaPlayer"   />
+	</children>
+</VBox>
