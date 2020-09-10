@@ -1,9 +1,15 @@
 package vorbereitung;
 
+import chapter02.demos.demo06.Model;
+import chapter02.demos.demo06.String;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
 public class Controller {
@@ -44,5 +50,14 @@ public class Controller {
 	}
 
 	@FXML public void calculate(ActionEvent event) {}
-	
+		// Szene wechseln
+		Scene oldScene = input3.getScene();
+		Stage stage = (Stage) oldScene.getWindow();
+
+		Parent root = FXMLLoader.load(getClass().getResource("View2.fxml"));
+		Scene newScene = new Scene(root);
+		stage.setTitle("Demo 2.6: Ausgabe");
+		stage.setScene(newScene);
+		stage.show();
+		}
 }
