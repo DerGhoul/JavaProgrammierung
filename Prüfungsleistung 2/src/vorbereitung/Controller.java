@@ -21,10 +21,19 @@ public class Controller {
 	
 	@FXML
 	public void pressedButton(ActionEvent calculate) {
-		String input1 = inputTF1.getText();
 		Model model = Model.getInstance();
-		double input01 = Double.parseDouble(input1);
-		model.setInitCapital(input01);
+		
+		String input1 = inputTF1.getText();
+		double inputDouble = Double.parseDouble(input1);
+		model.setInitCapital(inputDouble);
+		
+		String input2 = inputTF2.getText();
+		float inputFloat = Float.parseFloat(input2);
+		model.setZins(inputFloat);
+		
+		String input3 = inputTF3.getText();
+		int inputInt = Integer.parseInt(input3);
+		model.setRunTime(inputInt);
 	}
 	
 }
