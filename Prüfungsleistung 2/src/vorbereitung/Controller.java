@@ -18,8 +18,6 @@ public class Controller {
 
 	@FXML Label label3;
 
-	@FXML Label label4;
-
 	@FXML Label resLabel;
 
 	@FXML TextField input1;
