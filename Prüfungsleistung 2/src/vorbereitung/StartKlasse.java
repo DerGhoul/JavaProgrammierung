@@ -19,6 +19,8 @@ public class StartKlasse extends Application {
 		Scene scene = new Scene(root);
 		primaryStage.setTitle("Demo 2.10");
 		primaryStage.setScene(scene);
+		primaryStage.setHeight(500);
+		primaryStage.setWidth(700);
 		primaryStage.show();		
 	}
 }

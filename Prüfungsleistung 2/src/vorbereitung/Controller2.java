@@ -37,6 +37,8 @@ public class Controller2 implements Initializable {
 		Scene scene = new Scene(root);
 		stage.setTitle("Demo 2.10");
 		stage.setScene(scene);
+		stage.setHeight(500);
+		stage.setWidth(700);
 		stage.show();
 	}
 
