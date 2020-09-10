@@ -1,6 +1,8 @@
 package vorbereitung;
 
  
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -32,7 +34,7 @@ public class Controller {
 	@FXML TextField input3;
 	
 	@FXML
-	public void pressedButton(ActionEvent calculate) {
+	public void pressedButton(ActionEvent calculate) throws IOException {
 		Model model = Model.getInstance();
 				
 		String inputString1 = input1.getText(); 
@@ -56,9 +58,6 @@ public class Controller {
 		stage.show();
 	}
 
-	@FXML 
-	public void calculate(ActionEvent event) throws Exception {
-		
-	}
+	
 }
 
