@@ -36,18 +36,22 @@ public class Controller {
 	@FXML
 	public void pressedButton(ActionEvent calculate) throws IOException {
 		Model model = Model.getInstance();
-				
+		
 		String inputString1 = input1.getText(); 
 		double inputDouble = Double.parseDouble(inputString1);
 		model.setInitCapital(inputDouble);
 		
 		String inputString2 = input2.getText();
-		float inputFloat = Float.parseFloat(inputString2);
-		model.setZins(inputFloat);
+		double inputZins = Float.parseFloat(inputString2);
+		model.setZins(inputZins);
 		
 		String inputString3 = input3.getText();
-		int inputInt = Integer.parseInt(inputString3);
-		model.setRunTime(inputInt);
+		double inputRunTime = Double.parseDouble(inputString3);
+		model.setRunTime(inputRunTime);
+		
+		
+		
+		
 		Scene oldScene = calcButton.getScene();
 		Stage stage = (Stage) oldScene.getWindow();
 

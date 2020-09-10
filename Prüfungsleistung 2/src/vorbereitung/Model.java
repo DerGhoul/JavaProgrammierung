@@ -3,8 +3,8 @@ package vorbereitung;
 public class Model {
 
 	private double initCapital;
-	private float zins;
-	private int runTime;
+	private double zins;
+	private double runTime;
 	
 	private static Model instance;
 	
@@ -26,19 +26,19 @@ public class Model {
 	public double getInitCapital() {
 		return initCapital;
 	}
-	public float getZins() {
+	public double getZins() {
 		return zins;
 	}
-	public int getRunTime() {
+	public double getRunTime() {
 		return runTime;
 	}
 	public void setInitCapital(double initCapital) {
 		this.initCapital = initCapital;
 	}
-	public void setZins(float zins) {
-		this.zins = zins;
+	public void setZins(double inputZins) {
+		this.zins = inputZins;
 	}
-	public void setRunTime(int runTime) {
-		this.runTime = runTime;
+	public void setRunTime(double inputRunTime) {
+		this.runTime = inputRunTime;
 	}
 }
