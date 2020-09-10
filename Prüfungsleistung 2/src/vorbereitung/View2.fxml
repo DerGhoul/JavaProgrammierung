@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.GridPane?>
+<<<<<<< HEAD
 <?import javafx.scene.layout.Label?>
+=======
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+>>>>>>> 56186371d31094621d4b325f3e41f2bb243d50f2
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="vorbereitung.Controller2">
 	<padding>
@@ -10,8 +16,14 @@
 	<children>		
 		<Label fx:id="label4" text="Zinsen" GridPane.columnIndex="0"
 			GridPane.rowIndex="3" GridPane.columnSpan="2" GridPane.rowSpan="2"></Label>
+<<<<<<< HEAD
 		<Label fx:id="Label5" text= "#calculate" GridPane.columnIndex="1"
+=======
+		<Label fx:id="label5" GridPane.columnIndex="1"
+>>>>>>> 56186371d31094621d4b325f3e41f2bb243d50f2
 			GridPane.rowIndex="3" GridPane.columnSpan="2" GridPane.rowSpan="2"></Label>
+		<Button fx:id="backButton" GridPane.columnIndex="1"
+			GridPane.rowIndex="4" GridPane.columnSpan="2" GridPane.rowSpan="1" onAction="#backToInputView"></Button>
 	</children>
 </GridPane>
 
