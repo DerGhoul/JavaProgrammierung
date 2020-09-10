@@ -4,36 +4,47 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 
 public class Controller {
 	
 	@FXML
 	Button calcButton;
 	
-	@FXML
-	TextField inputTF1;
-	
-	@FXML
-	TextField inputTF2;
-	
-	@FXML
-	TextField inputTF3;
+
+	@FXML Label label1;
+
+	@FXML Label label2;
+
+	@FXML Label label3;
+
+	@FXML Label label4;
+
+	@FXML Label resLabel;
+
+	@FXML TextField input1;
+
+	@FXML TextField input2;
+
+	@FXML TextField input3;
 	
 	@FXML
 	public void pressedButton(ActionEvent calculate) {
 		Model model = Model.getInstance();
-		
-		String input1 = inputTF1.getText();
-		double inputDouble = Double.parseDouble(input1);
+				
+		String inputString1 = input1.getText(); 
+		double inputDouble = Double.parseDouble(inputString1);
 		model.setInitCapital(inputDouble);
 		
-		String input2 = inputTF2.getText();
-		float inputFloat = Float.parseFloat(input2);
+		String inputString2 = input2.getText();
+		float inputFloat = Float.parseFloat(inputString2);
 		model.setZins(inputFloat);
 		
-		String input3 = inputTF3.getText();
-		int inputInt = Integer.parseInt(input3);
+		String inputString3 = input3.getText();
+		int inputInt = Integer.parseInt(inputString3);
 		model.setRunTime(inputInt);
 	}
+
+	@FXML public void calculate(ActionEvent event) {}
 	
 }
