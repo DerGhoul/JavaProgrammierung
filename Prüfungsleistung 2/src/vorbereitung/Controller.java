@@ -55,7 +55,7 @@ public class Controller {
 
 		Parent root = FXMLLoader.load(getClass().getResource("View2.fxml"));
 		Scene scene = new Scene(root);
-		stage.setTitle("Demo 2.10");
+		stage.setTitle("Engabefenster");
 		stage.setScene(scene);
 		stage.show();
 	}
