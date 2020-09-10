@@ -1,7 +1,6 @@
 package vorbereitung;
 
-import chapter02.demos.demo06.Model;
-import chapter02.demos.demo06.String;
+ 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
