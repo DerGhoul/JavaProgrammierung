@@ -18,6 +18,11 @@ public class Model {
 		}
 		return instance;
 	}
+	private double calculateZins() {
+		double result = initCapital * (zins / 100) * runTime;
+		return result;
+	}
+	
 	public double getInitCapital() {
 		return initCapital;
 	}
