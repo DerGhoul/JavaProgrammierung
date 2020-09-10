@@ -21,7 +21,10 @@ public class Controller {
 	
 	@FXML
 	public void pressedButton(ActionEvent calculate) {
-		
+		String input1 = inputTF1.getText();
+		Model model = Model.getInstance();
+		double input01 = Double.parseDouble(input1);
+		model.setInitCapital(input01);
 	}
 	
 }
