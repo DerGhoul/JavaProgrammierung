@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Button?>
+<?import javafx.scene.layout.TextField?>
+<?import javafx.scene.layout.Labe?>
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="vorbereitung.Controller">
 	<padding>
