@@ -1,5 +1,7 @@
 package vorbereitung;
 
+import javafx.beans.property.StringProperty;
+
 public class Model {
 
 	private double initCapital;
@@ -7,6 +9,8 @@ public class Model {
 	private double runTime;
 	
 	private static Model instance;
+	
+	
 	
 	private Model() {
 		
@@ -18,6 +22,18 @@ public class Model {
 		}
 		return instance;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private double calculateZins() {
 		double result = initCapital * (zins / 100) * runTime;
 		return result;
