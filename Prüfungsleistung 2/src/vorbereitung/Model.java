@@ -34,8 +34,8 @@ public class Model {
 	
 	
 	
-	private double calculateZins() {
-		double result = initCapital * (zins / 100) * runTime;
+	public double calculateZins() {
+		double result = (initCapital * (zins / 100) * runTime) + initCapital ;
 		return result;
 	}
 	

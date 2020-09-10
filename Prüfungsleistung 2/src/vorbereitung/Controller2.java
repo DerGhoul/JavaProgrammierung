@@ -1,15 +1,23 @@
 package vorbereitung;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javax.naming.spi.InitialContextFactory;
+
+import com.sun.javafx.css.CalculatedValue;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class Controller2 {
+public class Controller2 implements Initializable {
 
 	@FXML 
 	Label label4;
@@ -30,6 +38,12 @@ public class Controller2 {
 		stage.setTitle("Demo 2.10");
 		stage.setScene(scene);
 		stage.show();
+	}
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		label5.setText(Model.getInstance().calculateZins()+"");
+		
 	}
 	
 	
