@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Label?>
 
-<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="vorbereitung.Controller">
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="vorbereitung.Controller2">
 	<padding>
 		<Insets top="50" right="50" bottom="50" left="50" />
 	</padding>
-	<children>
-		
+	<children>		
 		<Label fx:id="label4" text="Zinsen" GridPane.columnIndex="0"
 			GridPane.rowIndex="3" GridPane.columnSpan="2" GridPane.rowSpan="2"></Label>
 		<Label fx:id="Label5" text= "#calculate" GridPane.columnIndex="1"
