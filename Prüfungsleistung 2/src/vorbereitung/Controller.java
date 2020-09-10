@@ -48,15 +48,16 @@ public class Controller {
 		model.setRunTime(inputInt);
 	}
 
-	@FXML public void calculate(ActionEvent event) {}
-		// Szene wechseln
-		Scene oldScene = input3.getScene();
+	@FXML 
+	public void calculate(ActionEvent event) throws Exception {
+		Scene oldScene = calcButton.getScene();
 		Stage stage = (Stage) oldScene.getWindow();
 
 		Parent root = FXMLLoader.load(getClass().getResource("View2.fxml"));
-		Scene newScene = new Scene(root);
-		Stage newStage = 
-
-
+		Scene scene = new Scene(root);
+		stage.setTitle("Demo 2.10");
+		stage.setScene(scene);
+		stage.show();
+	}
 }
 
