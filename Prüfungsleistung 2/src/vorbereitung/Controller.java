@@ -55,8 +55,8 @@ public class Controller {
 
 		Parent root = FXMLLoader.load(getClass().getResource("View2.fxml"));
 		Scene newScene = new Scene(root);
-		stage.setTitle("Demo 2.6: Ausgabe");
-		stage.setScene(newScene);
-		stage.show();
-		}
+		Stage newStage = 
+
+
 }
+

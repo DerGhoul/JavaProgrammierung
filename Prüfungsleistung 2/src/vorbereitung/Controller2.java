@@ -25,10 +25,10 @@ public class Controller2 {
 		Scene oldScene = backButton.getScene();
 		Stage stage = (Stage) oldScene.getWindow();
 		
-		Parent root = FXMLLoader.load(getClass().getResource("View1.fxml"));
-		Scene newScene = new Scene(root);
-		stage.setTitle("Ergebnis");
-		stage.setScene(newScene);
+		Parent root = FXMLLoader.load(getClass().getResource("View2.fxml"));
+		Scene scene = new Scene(root);
+		stage.setTitle("Demo 2.10");
+		stage.setScene(scene);
 		stage.show();
 	}
 	
