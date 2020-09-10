@@ -32,13 +32,13 @@ public class Model {
 	public int getRunTime() {
 		return runTime;
 	}
-	public void setInitCapital() {
+	public void setInitCapital(double initCapital) {
 		this.initCapital = initCapital;
 	}
-	public void setZins() {
+	public void setZins(float zins) {
 		this.zins = zins;
 	}
-	public void setRunTime() {
+	public void setRunTime(int runTime) {
 		this.runTime = runTime;
 	}
 }
