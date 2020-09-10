@@ -2,6 +2,7 @@
 
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
 
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="vorbereitung.Controller2">
@@ -11,8 +12,10 @@
 	<children>		
 		<Label  fx:id="label4" text="Zinsen" GridPane.columnIndex="0"
 			GridPane.rowIndex="3" GridPane.columnSpan="2" GridPane.rowSpan="2"></Label>
-		<Label fx:id="label5" text= "#calculate" GridPane.columnIndex="1"
+		<Label fx:id="label5" GridPane.columnIndex="1"
 			GridPane.rowIndex="3" GridPane.columnSpan="2" GridPane.rowSpan="2"></Label>
+		<Button fx:id="backButton" GridPane.columnIndex="1"
+			GridPane.rowIndex="4" GridPane.columnSpan="2" GridPane.rowSpan="1" onAction="#backToInputView"></Button>
 	</children>
 </GridPane>
 

@@ -29,7 +29,7 @@
 			
 		<Button  fx:id="calcButton" 					GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="2" GridPane.rowSpan="1"
 		
-			text="Zinsen berechen" textAlignment="center" onAction="#calculate" />
+			text="Zinsen berechen" textAlignment="center" onAction="#pressedButton" />
 	</children>
 </GridPane>
 
