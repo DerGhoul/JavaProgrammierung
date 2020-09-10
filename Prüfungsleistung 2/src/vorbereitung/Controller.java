@@ -46,18 +46,16 @@ public class Controller {
 		Model model = Model.getInstance();
 		boolean isCorrect = false;
 		
-		try {
 			
-		
 			try {
 				String inputString1 = input1.getText(); 
 				double inputDouble = Double.parseDouble(inputString1);
 				model.setInitCapital(inputDouble);	
 				isCorrect = true;
 			} catch (Exception e) {		
-				alert.setContentText("Bitte eine Zahl einfügen");
+				alert.setContentText("Bitte eine Zahl als Anfangskapital einfügen");
 				alert.setHeaderText("Ungültige Eingabe");
-				alert.show();
+				alert.showAndWait();
 				isCorrect = false;
 			}
 			
@@ -68,9 +66,9 @@ public class Controller {
 				model.setZins(inputZins);
 				isCorrect = true;
 			} catch (Exception e) {	
-				alert.setContentText("Bitte eine Zahl einfügen");
+				alert.setContentText("Bitte eine Zahl als Zinssatz einfügen");
 				alert.setHeaderText("Ungültige Eingabe");
-				alert.show();
+				alert.showAndWait();
 				isCorrect = false;
 			}
 			
@@ -80,16 +78,12 @@ public class Controller {
 				model.setRunTime(inputRunTime);
 				isCorrect = true;
 			} catch (Exception e) {
-				alert.setContentText("Bitte eine Zahl einfügen");
+				alert.setContentText("Bitte eine Zahl als Laufzeit einfügen");
 				alert.setHeaderText("Ungültige Eingabe");
-				alert.show();
+				alert.showAndWait();
 				isCorrect = false;
 			}					
-		} catch (Exception e) {
-			alert.setHeaderText("Ungültige Eingabe");
-			alert.setContentText("Ihre Angaben sind nicht gültig");
-			alert.show();
-		}
+		
 		if(isCorrect == true) {
 			Scene oldScene = calcButton.getScene();
 			Stage stage = (Stage) oldScene.getWindow();
