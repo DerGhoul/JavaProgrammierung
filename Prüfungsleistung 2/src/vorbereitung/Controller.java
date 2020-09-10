@@ -46,10 +46,6 @@ public class Controller {
 		String inputString3 = input3.getText();
 		int inputInt = Integer.parseInt(inputString3);
 		model.setRunTime(inputInt);
-	}
-
-	@FXML 
-	public void calculate(ActionEvent event) throws Exception {
 		Scene oldScene = calcButton.getScene();
 		Stage stage = (Stage) oldScene.getWindow();
 
@@ -58,6 +54,11 @@ public class Controller {
 		stage.setTitle("Engabefenster");
 		stage.setScene(scene);
 		stage.show();
+	}
+
+	@FXML 
+	public void calculate(ActionEvent event) throws Exception {
+		
 	}
 }
 
