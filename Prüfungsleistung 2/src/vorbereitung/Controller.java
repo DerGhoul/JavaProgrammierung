@@ -44,6 +44,8 @@ public class Controller {
 	@FXML
 	public void pressedButton(ActionEvent calculate) throws IOException {
 		Model model = Model.getInstance();
+		boolean isCorrect = false;
+		
 		try {
 			
 		
@@ -51,37 +53,44 @@ public class Controller {
 				String inputString1 = input1.getText(); 
 				double inputDouble = Double.parseDouble(inputString1);
 				model.setInitCapital(inputDouble);	
+				isCorrect = true;
 			} catch (Exception e) {		
 				alert.setContentText("Bitte eine Zahl einfügen");
 				alert.setHeaderText("Ungültige Eingabe");
 				alert.show();
+				isCorrect = false;
 			}
 			
 			
 			try {
 				String inputString2 = input2.getText();
-			double inputZins = Float.parseFloat(inputString2);
-			model.setZins(inputZins);
+				double inputZins = Float.parseFloat(inputString2);
+				model.setZins(inputZins);
+				isCorrect = true;
 			} catch (Exception e) {	
 				alert.setContentText("Bitte eine Zahl einfügen");
 				alert.setHeaderText("Ungültige Eingabe");
 				alert.show();
+				isCorrect = false;
 			}
 			
 			try {
-			String inputString3 = input3.getText();
-			double inputRunTime = Double.parseDouble(inputString3);
-			model.setRunTime(inputRunTime);
-			
-			
-			
-			
+				String inputString3 = input3.getText();
+				double inputRunTime = Double.parseDouble(inputString3);
+				model.setRunTime(inputRunTime);
+				isCorrect = true;
 			} catch (Exception e) {
 				alert.setContentText("Bitte eine Zahl einfügen");
 				alert.setHeaderText("Ungültige Eingabe");
 				alert.show();
-			}		
-			
+				isCorrect = false;
+			}					
+		} catch (Exception e) {
+			alert.setHeaderText("Ungültige Eingabe");
+			alert.setContentText("Ihre Angaben sind nicht gültig");
+			alert.show();
+		}
+		if(isCorrect == true) {
 			Scene oldScene = calcButton.getScene();
 			Stage stage = (Stage) oldScene.getWindow();
 
@@ -90,14 +99,7 @@ public class Controller {
 			stage.setTitle("Engabefenster");
 			stage.setScene(scene);
 			stage.show();
-		} catch (Exception e) {
-			alert.setHeaderText("Ungültige Eingabe");
-			alert.setContentText("Ihre Angaben sind nicht gültig");
-			alert.show();
-		}
-		
-		
-		
+		}		
 	}
 
 	
