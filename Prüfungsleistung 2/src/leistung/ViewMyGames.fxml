@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.MenuBar?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="leistung.MyGamesController" >
+	<MenuBar fx:id="menuBar" >
+		<Menu fx
+	
+	</MenuBar>
+	<children>
+		<TableView fx:id="gameTable" editable="false"  >
+			<columns>
+			
+				<TableColumn fx:id="titleColumn" >
+					<cellValueFactory>
+						<PropertyValueFactory  property="title" />
+					</cellValueFactory>
+				</TableColumn>
+				
+				
+				<TableColumn fx:id="genreColumn" >
+					<cellValueFactory>
+						<PropertyValueFactory property="genre" />
+					</cellValueFactory>
+				</TableColumn>
+				
+				
+				<TableColumn fx:id="yearColumn" >
+					<cellValueFactory>
+						<PropertyValueFactory property="year" />
+					</cellValueFactory>
+				</TableColumn>
+				
+				
+				<TableColumn fx:id="systemColumn" >
+					<cellValueFactory>
+						<PropertyValueFactory property="system" />
+					</cellValueFactory>
+				</TableColumn>
+				
+				
+				<TableColumn fx:id="isPlayedColumn" >
+					<cellValueFactory>
+						<PropertyValueFactory property="isPlayed" />
+					</cellValueFactory>
+				</TableColumn>
+				
+			</columns>
+		</TableView>
+	</children>
+</GridPane>
+
