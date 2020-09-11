@@ -2,37 +2,46 @@
 
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 
-<GridPane xmlns:fx="http://javafx.com/fxml/1">
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="leistung.EditGameController">
 	
 	<children>
 	
-		<Label fx:id="newGameTitle" text="Titel" GridPane.columnIndex="0"
-		GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+		<Label fx:id="newGameTitle" text="Titel"
+		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
 		<Label fx:id="newGameGenre" text="Genre"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+		GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
 		<Label fx:id="newGameReleaseDate" text="Erscheinungsjahr"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+		GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
-		<Label fx:id="newGameOS" text="Betriebssystem"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+		<Label fx:id="editGameSystem" text="System:"
+		GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="1" GridPane.rowSpan="1"
 		
-		<Label fx:id="newGameCS" text="Konsolensystem"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+		<Label fx:id="newGameOS" text="Betriebssystem:"
+		GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+		
+		<Label fx:id="newGameCS" text="Konsolensystem:"
+		GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
 		<TextField fx:id="newGameInputTitle" 
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></TextField>
+		GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></TextField>
 		
 		<ComboBox fx:id="newGameInputGenre"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></ComboBox>
+		GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="1" GridPane.rowSpan="1"></ComboBox>
 		
 		<TextField fx:id="newGameInputReleaseDate"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></TextField>
+		GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.columnSpan="1" GridPane.rowSpan="1"></TextField>
 		
-		<RadioButton fx:id="newGameSystemInput"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
+		<RadioButton fx:id="newGameSystemInputConsole"
+		GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
+		
+		<RadioButton fx:id="newGameSystemInputPC"
+		GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
+		
+		
 				
 		<Button fx:id="newGameEnter" text="Neues Spiel hinzufügen" textAlignment="center" onAction="#newGameEnter"
 		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Button>
