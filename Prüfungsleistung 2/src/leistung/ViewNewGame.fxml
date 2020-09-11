@@ -8,43 +8,60 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.HBox?>
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="leistung.NewGameController">
 	
 	<children>
 	
-		<Label fx:id="newGameTitle" text="Titel" GridPane.columnIndex="0"
-		GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
-		
-		<Label fx:id="newGameGenre" text="Genre"
+		<Label fx:id="newGameTitle" text="Titel:"
 		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
-		<Label fx:id="newGameReleaseDate" text="Erscheinungsjahr"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+		<Label fx:id="newGameGenre" text="Genre:"
+		GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
-		<Label fx:id="newGameOS" text="Betriebssystem"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+		<Label fx:id="newGameReleaseDate" text="Erscheinungsjahr:"
+		GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
-		<Label fx:id="newGameCS" text="Konsolensystem"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+		<Label fx:id="newGameSystem" text="System:"
+		GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+		
+		<Label fx:id="newGameOS" text="Betriebssystem:"
+		GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+		
+		<Label fx:id="newGameCS" text="Konsolensystem:"
+		GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
 		<TextField fx:id="newGameInputTitle" 
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></TextField>
+		GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></TextField>
 		
 		<ComboBox fx:id="newGameInputGenre"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></ComboBox>
+		GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="1" GridPane.rowSpan="1"></ComboBox>
 		
 		<TextField fx:id="newGameInputReleaseDate"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></TextField>
+		GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.columnSpan="1" GridPane.rowSpan="1"></TextField>
 		
-		<RadioButton fx:id="newGameSystemInput"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
+		<RadioButton fx:id="newGameSystemInputConsole"
+		GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
+		
+		<RadioButton fx:id="newGameSystemInputPC"
+		GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
+		
+		<RadioButton fx:id="newGameSystemInputMG"
+		GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
 				
-		<Button fx:id="newGameEnter" text="Neues Spiel hinzufügen" textAlignment="center" onAction="#newGameEnter"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Button>
+		<ComboBox fx:id="newGameInputRS"
+		GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.columnSpan="1" GridPane.rowSpan="1"></ComboBox>
 		
-		<Button fx:id="newGameQuit" text="Abbrechen" textAlignment="center" onAction="#newGameQuit"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Button>		
+		<HBox fx:id="buttonPart"
+		GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="2" GridPane.rowSpan="1">
+	
+			<Button fx:id="newGameEnter" text="Neues Spiel hinzufügen" textAlignment="center" onAction="#newGameEnter"></Button>
+			
+			<Button fx:id="newGameQuit" text="Abbrechen" textAlignment="center" onAction="#newGameQuit"></Button>		
+	
+		</HBox>
+	
 	</children>
 	
 </GridPane>
