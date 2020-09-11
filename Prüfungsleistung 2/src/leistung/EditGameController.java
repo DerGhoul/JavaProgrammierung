@@ -28,7 +28,7 @@ public class EditGameController {
 	@FXML Label editGameSystem;
 	@FXML Label newGameOS;
 	@FXML Label newGameCS;
-	@FXML TextField newGameInputTitle;
+	@FXML java.awt.TextField newGameInputTitle;
 	@FXML ComboBox<Genre> newGameInputGenre;
 	@FXML TextField newGameInputReleaseDate;
 	@FXML RadioButton newGameSystemInputConsole;
@@ -53,7 +53,19 @@ public class EditGameController {
 	}
 
 	@FXML public void newGameEnter(ActionEvent event) throws IOException  {
-	
+		
+		Model m = Model.getInstance();
+		m.setTitle(newGameInputTitle.getText());
+		m.setGenre(newGameInputGenre. getText());
+		m.setYearofRelease(newGameInputReleaseDate.getInt());
+		m.setPlayedThrough(editGameFinishedInput.getboolean);
+		if (newGameInputConsole == true) {
+			m.setSystem(newGameInputConsoleSystem.getText);
+		}
+		else {
+			m.setSystem(newGameInputOperatingSystem.getText);
+		}
+		
 		/*
 		 * Der Szenenwechsel nach Bestätigung der Eingabe
 		 */
