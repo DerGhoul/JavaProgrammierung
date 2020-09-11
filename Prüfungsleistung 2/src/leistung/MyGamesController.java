@@ -40,6 +40,14 @@ public class MyGamesController implements Initializable {
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
 	/*
 	 * Spalte "ausgewählt": Aussehen/Art der Zelle (Kontrollkästchen)	 * 	
 	 */
