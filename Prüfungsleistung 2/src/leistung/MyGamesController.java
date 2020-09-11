@@ -23,6 +23,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -45,7 +46,7 @@ public class MyGamesController implements Initializable {
 	@FXML CheckMenuItem check;
 	@FXML CheckMenuItem editableCheckMenuItem;
 	
-	
+	Writer writer = new Writer();
 	
 	
 	
@@ -111,9 +112,15 @@ public class MyGamesController implements Initializable {
 
 
 	@FXML public void saveGames(ActionEvent event) {
-		for (Option s : gameTable) {
-			
-		}
+		/*
+			String items = titleColumn.getText();
+			for (Object item : items) {
+				 += item.toString() + "/n";
+				
+			}
+			writer.write(str1);
+	*/
+	}
 		
 		String title;
 		String genre;
@@ -137,4 +144,4 @@ public class MyGamesController implements Initializable {
 	
 	
 	
-}
+
