@@ -35,7 +35,7 @@ public class MyGamesController implements Initializable {
 	@FXML Menu menue;
 	@FXML MenuItem deleteAllGames;
 	@FXML TableView<Option> gameTable;
-	@FXML TableColumn<Option, Integer> 	titleColumn;
+	@FXML TableColumn<Option, String> 	titleColumn;
 	@FXML TableColumn<Option, String> 	genreColumn;
 	@FXML TableColumn<Option, String> 	yearColumn;
 	@FXML TableColumn<Option, String> 	systemColumn;
@@ -111,6 +111,10 @@ public class MyGamesController implements Initializable {
 
 
 	@FXML public void saveGames(ActionEvent event) {
+		for (Option s : gameTable) {
+			
+		}
+		
 		String title;
 		String genre;
 		String yoR;
