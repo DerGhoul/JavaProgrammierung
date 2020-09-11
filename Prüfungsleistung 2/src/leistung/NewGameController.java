@@ -2,8 +2,10 @@ package leistung;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.ComboBoxListCell;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
@@ -15,10 +17,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 
-public class NewGameController {
+public class NewGameController implements Initializable {
 
 	@FXML Label newGameTitle;
 	@FXML Label newGameGenre;
@@ -27,12 +31,12 @@ public class NewGameController {
 	@FXML Label newGameOS;
 	@FXML Label newGameCS;
 	@FXML TextField newGameInputTitle;
-	@FXML ComboBox<Genre> newGameInputGenre;
+	@FXML ComboBox<String> newGameInputGenre;
 	@FXML TextField newGameInputReleaseDate;
 	@FXML RadioButton newGameSystemInputConsole;
 	@FXML RadioButton newGameSystemInputPC;
 	@FXML RadioButton newGameSystemInputMG;
-	@FXML ComboBox<Genre> newGameInputRS;
+	@FXML ComboBox<String> newGameInputRS;
 	@FXML HBox buttonPart;
 	@FXML Button newGameEnter;
 	@FXML Button newGameQuit;
@@ -55,6 +59,7 @@ public class NewGameController {
 			alert.showAndWait();
 			isCorrect = false;
 		}
+		
 		
 		
 		try {
@@ -137,6 +142,14 @@ public class NewGameController {
 			
 			
 		}
+	}
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		ComboBoxListCell<String> genre1;
+		genre1 = genre1.setText("Action");
+		
+		
 	}
 	
 	
