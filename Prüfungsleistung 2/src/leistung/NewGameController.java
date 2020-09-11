@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.ComboBoxListCell;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ComboBoxBase;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -16,10 +17,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
+import java.awt.List;
 import java.io.IOException;
 import java.net.URL;
+
 import java.util.ResourceBundle;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
 public class NewGameController implements Initializable {
@@ -144,12 +148,53 @@ public class NewGameController implements Initializable {
 		}
 	}
 
+	@SuppressWarnings("null")
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		ComboBoxListCell<String> genre1;
-		genre1 = genre1.setText("Action");
+		ObservableList<ComboBoxListCell<String>> cls = null;
 		
 		
+		ComboBoxListCell<String> genre1 = new ComboBoxListCell<>();
+		genre1.setText("Action");cls.add(genre1);
+		ComboBoxListCell<String> genre2 = new ComboBoxListCell<>();
+		genre1.setText("ActionAdventure");cls.add(genre2);
+		ComboBoxListCell<String> genre3 = new ComboBoxListCell<>();
+		genre1.setText("RPG");cls.add(genre3);
+		ComboBoxListCell<String> genre4 = new ComboBoxListCell<>();
+		genre1.setText("Sport");cls.add(genre4);
+		ComboBoxListCell<String> genre5 = new ComboBoxListCell<>();
+		genre1.setText("Strategy");cls.add(genre5);
+		ComboBoxListCell<String> genre6 = new ComboBoxListCell<>();
+		genre1.setText("Simulation");cls.add(genre6);
+		
+		
+		
+		newGameInputGenre.getChildrenUnmodifiable().addAll(cls);
+		
+		
+		ObservableList<ComboBoxListCell<String>> grs = null;
+		
+		
+		ComboBoxListCell<String> inputrs1 = new ComboBoxListCell<>();
+		inputrs1.setText("MS_Windows");grs.add(inputrs1);
+		ComboBoxListCell<String> inputrs2 = new ComboBoxListCell<>();
+		inputrs1.setText("MacOS");grs.add(inputrs2);
+		ComboBoxListCell<String> inputrs3 = new ComboBoxListCell<>();
+		inputrs1.setText("Linux");grs.add(inputrs3);
+		ComboBoxListCell<String> inputrs4 = new ComboBoxListCell<>();
+		inputrs1.setText("IOS");grs.add(inputrs4);
+		ComboBoxListCell<String> inputrs5 = new ComboBoxListCell<>();
+		inputrs1.setText("Android");grs.add(inputrs5);
+		ComboBoxListCell<String> inputrs6 = new ComboBoxListCell<>();
+		inputrs1.setText("PS4");grs.add(inputrs6);
+		ComboBoxListCell<String> inputrs7 = new ComboBoxListCell<>();
+		inputrs1.setText("XBOXONE");grs.add(inputrs7);
+		ComboBoxListCell<String> inputrs8 = new ComboBoxListCell<>();
+		inputrs1.setText("Switch");grs.add(inputrs8);
+		
+		
+		
+		newGameInputRS.getChildrenUnmodifiable().addAll(grs);
 	}
 	
 	
