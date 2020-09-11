@@ -30,13 +30,34 @@ public class Model {
 	String system = new String();
 	ConsoleSystem consoleSystem;
 	OperatingSystem operatingSystem;
-	List<String> tableViewItems = new List<>(); 
+	List<String> tableViewItems;
 	
 	
 
 
 
 
+	public List<String> getTableViewItems() {
+		return tableViewItems;
+	}
+
+	public void setTableViewItems(List<String> tableViewItems) {
+		this.tableViewItems = tableViewItems;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public  String getTitle() {
 		String title = game.getTitel();
 		return title;
