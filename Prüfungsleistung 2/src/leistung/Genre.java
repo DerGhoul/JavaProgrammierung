@@ -2,9 +2,9 @@ package leistung;
 
 public enum Genre {
 
-	Action("Action_Spiel"),ActionAdventure("Action-Adventure_Spiel"),
-	RPG("Rollenspiel"),Sport("Sport_Spiel"),Strategy("Strategie_Spiel"),
-	Simulation("Simulation_Spiel");
+	Action("Action"),ActionAdventure("ActionAdventure"),
+	RPG("RPG"),Sport("Sport"),Strategy("Strategy"),
+	Simulation("Simulation");
 	/*
 	 * Attribute
 	 */
