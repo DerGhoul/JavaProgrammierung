@@ -28,39 +28,39 @@
 	
 	
 	
-		<TableView fx:id="gameTable" editable="false" 
+		<TableView fx:id="gameTable" editable="true" 
 					GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" >
 			<columns>
 			
-				<TableColumn fx:id="titleColumn" text="Titel" >
+				<TableColumn fx:id="titleColumn" text="Titel" editable="true" >
 					<cellValueFactory>
 						<PropertyValueFactory  property="title" />
 					</cellValueFactory>
 				</TableColumn>
 				
 				
-				<TableColumn fx:id="genreColumn" text="Genre" >
+				<TableColumn fx:id="genreColumn" text="Genre" editable="true">
 					<cellValueFactory>
 						<PropertyValueFactory property="genre" />
 					</cellValueFactory>
 				</TableColumn>
 				
 				
-				<TableColumn fx:id="yearColumn" text="Jahr" >
+				<TableColumn fx:id="yearColumn" text="Jahr" editable="true">
 					<cellValueFactory>
 						<PropertyValueFactory property="year" />
 					</cellValueFactory>
 				</TableColumn>
 				
 				
-				<TableColumn fx:id="systemColumn" text="System" >
+				<TableColumn fx:id="systemColumn" text="System" editable="true">
 					<cellValueFactory>
 						<PropertyValueFactory property="system" />
 					</cellValueFactory>
 				</TableColumn>
 				
 				
-				<TableColumn fx:id="isPlayedColumn" text="durchgespielt" >
+				<TableColumn fx:id="isPlayedColumn" text="durchgespielt" editable="true">
 					<cellValueFactory>
 						<PropertyValueFactory property="isPlayed" />
 					</cellValueFactory>
