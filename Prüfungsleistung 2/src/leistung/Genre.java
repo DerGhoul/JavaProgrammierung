@@ -9,8 +9,7 @@ public enum Genre {
 	 * Attribute
 	 */
 	private String description;
-	Genre(String description) {
-		this.description = description;
+	Genre() {
 	}
 	/*
 	 * Methoden
