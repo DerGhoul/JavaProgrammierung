@@ -42,12 +42,12 @@ public class NewGameController {
 		
 		Model model = Model.getInstance();
 		boolean isCorrect = false;
+		
 		/*
 		 * Speichern des Titels aus der Eingabe
 		 */
 		try {
-		String inputStringTitle = newGameInputTitle.getText();
-		model.setTitle(inputStringTitle);
+		model.setTitle(newGameInputTitle.getText());
 		}catch (Exception e) {
 			alert.setContentText("Bitte eine Zeichenkette als Titel eingeben");
 			alert.setHeaderText("Ungültige Eingabe");
@@ -55,9 +55,9 @@ public class NewGameController {
 			isCorrect = false;
 		}
 		
+		
 		try {
-		String inputStringReleaseDate = newGameInputReleaseDate.getText();
-		model.setReleaseDate(inputStringReleaseDate);
+		model.setYearofRelease(newGameInputReleaseDate.getText());
 		} catch (Exception e) {
 			alert.setContentText("Bitte eine Zahl als Erscheinungsjahr eingeben");
 			alert.setHeaderText("Ungültige Eingabe");
