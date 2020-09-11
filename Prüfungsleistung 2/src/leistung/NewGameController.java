@@ -95,6 +95,36 @@ public class NewGameController {
 		stage.show();
 		
 	}
+
+	@FXML public void newGameSystemInputPCSelected(ActionEvent event) {
+		if (newGameSystemInputMG.isSelected() == true) {
+			newGameSystemInputMG.setSelected(false);
+		}
+		if(newGameSystemInputConsole.isSelected() == true) {
+			newGameSystemInputConsole.setSelected(false);
+			
+		}
+	}
+
+	@FXML public void newGameSystemInputMGSelected() {
+		if (newGameSystemInputPC.isSelected() == true) {
+			newGameSystemInputPC.setSelected(false);
+		}
+		if(newGameSystemInputConsole.isSelected() == true) {
+			newGameSystemInputConsole.setSelected(false);
+			
+		}
+	}
+
+	@FXML public void newGameSystemInputConsoleSelected(ActionEvent event) {
+		if (newGameSystemInputPC.isSelected() == true) {
+			newGameSystemInputPC.setSelected(false);
+		}
+		if(newGameSystemInputMG.isSelected() == true) {
+			newGameSystemInputMG.setSelected(false);
+			
+		}
+	}
 	
 	
 	
