@@ -8,13 +8,13 @@
 	
 	<children>
 	
-		<Label fx:id="newGameTitle" text="Titel"
+		<Label fx:id="newGameTitle" text="Titel:"
 		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
-		<Label fx:id="newGameGenre" text="Genre"
+		<Label fx:id="newGameGenre" text="Genre:"
 		GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
-		<Label fx:id="newGameReleaseDate" text="Erscheinungsjahr"
+		<Label fx:id="newGameReleaseDate" text="Erscheinungsjahr:"
 		GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
 		<Label fx:id="editGameSystem" text="System:"
@@ -41,16 +41,24 @@
 		<RadioButton fx:id="newGameSystemInputPC"
 		GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
 		
+		<RadioButton fx:id="newGameSystemInputMG"
+		GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>		
+		
+		<Label fx:id="editGameGameFinished" text="Durchgespielt?"
+		GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
+				
+		<CheckBox fx:id="editGameFinishedInput"
+		GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.columnSpan="1" GridPane.rowSpan="1"></CheckBox>
+		
+		
+		
+			<Button fx:id="newGameEnter" text="Neues Spiel hinzufügen" textAlignment="center" onAction="#newGameEnter"
+			GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Button>
+			
+			<Button fx:id="newGameQuit" text="Abbrechen" textAlignment="center" onAction="#newGameQuit"
+			GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Button>
 		
 				
-		<Button fx:id="newGameEnter" text="Neues Spiel hinzufügen" textAlignment="center" onAction="#newGameEnter"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Button>
-		
-		<Button fx:id="newGameQuit" text="Abbrechen" textAlignment="center" onAction="#newGameQuit"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Button>
-		
-		<CheckBox fx:id="editGameFinishedInput"
-		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></CheckBox>		
 	
 	</children>
 	
