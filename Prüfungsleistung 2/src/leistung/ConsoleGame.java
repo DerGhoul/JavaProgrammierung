@@ -9,8 +9,10 @@ public class ConsoleGame extends Game{
 	/*
 	 * Methoden
 	 */
-	public void setCS (String c) {cS = c; }
+	public void setCS (String cS) {
+		this.cS = cS; }
 	
-	public String getCS() {return cS; }
+	public String getCS() {
+		return cS; }
 	
 }

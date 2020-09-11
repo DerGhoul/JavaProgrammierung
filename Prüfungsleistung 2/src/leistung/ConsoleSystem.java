@@ -2,7 +2,7 @@ package leistung;
 
 public enum ConsoleSystem {
 	
-	PS4("Playstation 4"),XONE("X Box One"),Switch("Nintendo Switch");
+	PS4("Playstation_4"),XONE("X_Box_One"),Switch("Nintendo_Switch");
 	/*
 	 * Attribute
 	 */
@@ -15,7 +15,6 @@ public enum ConsoleSystem {
 		this.description = description;
 		this.abberivation = description;
 	}
-	
 	public String getDescription() {
 		return description;
 	}
