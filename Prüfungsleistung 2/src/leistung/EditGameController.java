@@ -38,6 +38,9 @@ public class EditGameController {
 
 	@FXML public void newGameQuit(ActionEvent event) throws IOException {
 		
+		/*
+		 * Der Szenenwechsel nach Betätigung des Abbruch Knopfes
+		 */
 		Scene oldScene = newGameQuit.getScene();
 		Stage stage = (Stage) oldScene.getWindow();
 
@@ -50,7 +53,10 @@ public class EditGameController {
 	}
 
 	@FXML public void newGameEnter(ActionEvent event) throws IOException  {
-		
+	
+		/*
+		 * Der Szenenwechsel nach Bestätigung der Eingabe
+		 */
 		Scene oldScene = newGameEnter.getScene();
 		Stage stage = (Stage) oldScene.getWindow();
 
