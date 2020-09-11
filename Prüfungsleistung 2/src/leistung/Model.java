@@ -29,16 +29,16 @@ public class Model {
 	/*
 	 * Attribute
 	 */
-	Game game = new Game();
-	Genre genre;
-	String system = new String();
-	ConsoleSystem consoleSystem;
-	OperatingSystem operatingSystem;
+	static Game game = new Game();
+	static Genre genre;
+	static String system = new String();
+	static ConsoleSystem consoleSystem;
+	static OperatingSystem operatingSystem;
 
 
 
 
-	public String getTitle() {
+	public static String getTitle() {
 		String title = game.getTitel();
 		return title;
 	}
@@ -81,7 +81,7 @@ public class Model {
 	
 	
 	
-	public String getYearofRelease() {
+	public static String getYearofRelease() {
 		return game.getYearOfRelease()+"";
 	}
 

@@ -8,7 +8,8 @@ import java.io.IOException;
 public class Writer {
 	
 	public void write(){
-		String titel = Model.getInstance().getTitel();
+		Model m = Model.getInstance();
+		String titel = Model.getTitel();
 		String genre = Model.getGenre();
 		String yearOfRelease = Model.getYearofRelease();
 		String system = Model.getSystem();
