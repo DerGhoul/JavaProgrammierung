@@ -111,6 +111,11 @@ public class MyGamesController implements Initializable {
 
 
 	@FXML public void saveGames(ActionEvent event) {
+		String title;
+		String genre;
+		String yoR;
+		String system;
+		String playedThrough;
 		
 	}
 
