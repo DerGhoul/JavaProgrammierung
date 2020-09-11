@@ -17,6 +17,8 @@ import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.util.Callback;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 
@@ -52,31 +54,11 @@ public class MyGamesController implements Initializable {
 		
 		isPlayedColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Option,Boolean>, ObservableValue<Boolean>>() {
 			public ObservableValue<Boolean> call(CellDataFeatures<Option, Boolean> param) {
-				// TODO Auto-generated method stub
+				SimpleBooleanProperty booleanProperty = new SimpleBooleanProperty(param.getValue().isSelected());
 				return null;
 			}
 		});
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		// Spalte "ausgewählt": Inhalt der Zelle (boolscher Wahrheitswert)
-		isPlayedColumn.setCellValueFactory(
-				new Callback<TableColumn.CellDataFeatures<Option, Boolean>, ObservableValue<Boolean>>() {
-					public ObservableValue<Boolean> call(CellDataFeatures<Option, Boolean> param) {
-						SimpleBooleanProperty booleanProperty = new SimpleBooleanProperty(
-								param.getValue().isSelected());
-						return booleanProperty;
-					}
-				});
-
+					
 	}
 
 
