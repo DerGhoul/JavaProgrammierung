@@ -21,6 +21,7 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioMenuItem;
 
 public class MyGamesController implements Initializable {
 
@@ -37,6 +38,10 @@ public class MyGamesController implements Initializable {
 	@FXML TableColumn<Option, Boolean> 	isPlayedColumn;
 	@FXML Button newGame;
 	@FXML Button deleteGame;
+	@FXML CheckMenuItem editableCheckMenuItem;
+	@FXML RadioMenuItem noConversionRadioMenuItem;
+	@FXML RadioMenuItem toLowerCaseConversionRadioMenuItem;
+	@FXML RadioMenuItem toUpperCaseConversionRadioMenuItem;
 	
 	
 	
@@ -63,7 +68,7 @@ public class MyGamesController implements Initializable {
 		isPlayedColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Option,Boolean>, ObservableValue<Boolean>>() {
 			public ObservableValue<Boolean> call(CellDataFeatures<Option, Boolean> param) {
 				SimpleBooleanProperty booleanProperty = new SimpleBooleanProperty(param.getValue().isSelected());
-				return null;
+				return booleanProperty;
 			}
 		});
 					

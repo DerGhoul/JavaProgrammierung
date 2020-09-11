@@ -14,42 +14,32 @@
 <?import javafx.scene.control.MenuItem?>
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="leistung.MyGamesController" >
-	<MenuBar fx:id="menuBar" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" >
-		<Menu  fx:id="menue" text="Menü" >
-			<Menu fx:id="saveGames" text="Speichern" >
-				<CheckMenuItem fx:id="check" />
-			</Menu>						
-			<Menu fx:id="deleteAllGames" text="Alle Spiele löschen">
-				
-			</Menu>
-	
-	</MenuBar>
-	<MenuBar fx:id="menuBar">
-		<Menu fx:id="menue" text="Menü">
-			<Menu fx:id="saveGames" text="Speichern">
-				<CheckMenuItem fx:id="check"
-					text="sichtbar" selected="true" />
-				<SeparatorMenuItem  />
-				<CheckMenuItem   fx:id="editableCheckMenuItem"
-					text="editierbar" selected="true" />
-			</Menu>
-			<Menu fx:id="deleteAllGames" text="Alle Spiele löschen">
-				<RadioMenuItem   fx:id="noConversionRadioMenuItem"
-					text="keine Konvertierung" selected="true" />
-				<RadioMenuItem fx:id="toLowerCaseConversionRadioMenuItem"
-					text="Kleinbuchstaben-Konvertierung"  />
-				<RadioMenuItem fx:id="toUpperCaseConversionRadioMenuItem"
-					text="Großbuchstaben-Konvertierung" />
-			</Menu>
-			<!--  -->MenuItem  fx:id="inputToOutputMenuItem"
-				text="Eingabe->Ausgabe" onAction="#inputToOutput" /-->
-		</Menu>
-	</MenuBar>
-	
-	
-	
-	
 	<children>
+		
+		<MenuBar fx:id="menuBar" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" >
+			<Menu fx:id="menue" text="Menü">
+				<Menu fx:id="saveGames" text="Speichern">
+					<CheckMenuItem fx:id="check"
+						text="sichtbar" selected="true" />
+					<SeparatorMenuItem  />
+					<CheckMenuItem   fx:id="editableCheckMenuItem"
+						text="editierbar" selected="true" />
+				</Menu>
+				<Menu  fx:id="deleteAllGames" text="Alle Spiele löschen">
+					<RadioMenuItem fx:id="noConversionRadioMenuItem"
+						text="keine Konvertierung" selected="true" />
+					<RadioMenuItem fx:id="toLowerCaseConversionRadioMenuItem"
+						text="Kleinbuchstaben-Konvertierung"  />
+					<RadioMenuItem fx:id="toUpperCaseConversionRadioMenuItem"
+						text="Großbuchstaben-Konvertierung" />
+				</Menu>			
+			</Menu>
+		</MenuBar>
+	
+	
+	
+	
+	
 		<TableView fx:id="gameTable" editable="false" 
 					GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" >
 			<columns>
@@ -92,11 +82,11 @@
 		</TableView>
 		
 		<Button fx:id="newGame" text="Neues Spiel anlegen" onAction="#createNewGame"
-				GridPane.columnIndex="0" GridPane.columnSpan="1" GridPane.rowIndex="2"/>
+				GridPane.columnIndex="0" GridPane.columnSpan="1" GridPane.rowIndex="2" />
 				
 				
 		<Button fx:id="deleteGame" text="Ausgewähltes Spiel entfernen" onAction="#deleteSelectedGame"
-				GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2"/> 
+				GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" /> 
 		
 	</children>
 </GridPane>
