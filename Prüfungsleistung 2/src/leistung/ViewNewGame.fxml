@@ -29,7 +29,7 @@
 		<Label fx:id="newGameOS" text="Betriebssystem:"
 		GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
-		<Label fx:id="newGameCS" text="Konsolensystem:"
+		<Label fx:id="newGameCS" text="Konsolensystem:" visible="false"
 		GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 		
 		<TextField fx:id="newGameInputTitle" 
