@@ -48,6 +48,7 @@ public class NewGameController {
 		 */
 		try {
 		model.setTitle(newGameInputTitle.getText());
+		isCorrect = true;
 		}catch (Exception e) {
 			alert.setContentText("Bitte eine Zeichenkette als Titel eingeben");
 			alert.setHeaderText("Ungültige Eingabe");
@@ -57,7 +58,8 @@ public class NewGameController {
 		
 		
 		try {
-		model.setYearofRelease(newGameInputReleaseDate.getText());
+			model.setYearofRelease(newGameInputReleaseDate.getText());
+			isCorrect=true;
 		} catch (Exception e) {
 			alert.setContentText("Bitte eine Zahl als Erscheinungsjahr eingeben");
 			alert.setHeaderText("Ungültige Eingabe");
@@ -69,6 +71,7 @@ public class NewGameController {
 		/*
 		* Szenenwechsel nach Betätigung des Hinzufügenknopfes
 		*/
+		if(isCorrect = true) {
 		Scene oldScene = newGameEnter.getScene();
 		Stage stage = (Stage) oldScene.getWindow();
 
@@ -77,6 +80,7 @@ public class NewGameController {
 		stage.setTitle("Meine Spiele");
 		stage.setScene(scene);
 		stage.show();
+		}
 		
 	}
 
