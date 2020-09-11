@@ -112,14 +112,7 @@ public class MyGamesController implements Initializable {
 
 
 	@FXML public void saveGames(ActionEvent event) {
-		/*
-			String items = titleColumn.getText();
-			for (Object item : items) {
-				 += item.toString() + "/n";
-				
-			}
-			writer.write(str1);
-	*/
+		
 	}
 		
 		String title;

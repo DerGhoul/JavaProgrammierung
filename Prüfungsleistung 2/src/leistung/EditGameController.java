@@ -56,11 +56,11 @@ public class EditGameController {
 		
 		Model m = Model.getInstance();
 		m.setTitle(newGameInputTitle.getText());
-		m.setGenre(newGameInputGenre. getText());
-		m.setYearofRelease(newGameInputReleaseDate.getInt());
-		m.setPlayedThrough(editGameFinishedInput.getboolean);
-		if (newGameInputConsole == true) {
-			m.setSystem(newGameInputConsoleSystem.getText);
+		m.setGenre(newGameInputGenre.getTypeSelector());
+		m.setYearofRelease(newGameInputReleaseDate.getText());
+		m.setPlayedThrough(editGameFinishedInput.isSelected());
+		if (newGameInputConsole.isSelected() == true) {
+			m.setSystem(newGameInputConsoleSystem.getText());
 		}
 		else {
 			m.setSystem(newGameInputOperatingSystem.getText);
