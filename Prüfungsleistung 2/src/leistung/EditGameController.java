@@ -14,6 +14,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.ComboBoxListCell;
 import javafx.stage.Stage;
 import javafx.scene.control.ComboBox;
@@ -52,6 +54,10 @@ public class EditGameController implements Initializable {
 	@FXML ComboBox<String> newGameInputConsoleSystem;
 	@FXML ComboBox<String> newGameInputGenre;
 
+	Alert alert = new Alert(AlertType.WARNING);
+	boolean isCorrect = false;
+	
+	
 	@FXML public void newGameQuit(ActionEvent event) throws IOException {
 		
 		/*
@@ -70,6 +76,10 @@ public class EditGameController implements Initializable {
 
 	@FXML public void newGameEnter(ActionEvent event) throws IOException  {
 		
+		/*
+		 * Auslesen der Eingaben und setzen der Werte im Model
+		 */
+		try {
 		Model m = Model.getInstance();
 		m.setTitle(newGameInputTitle.getText());
 		m.setGenre(newGameInputGenre.getTypeSelector());
@@ -92,6 +102,14 @@ public class EditGameController implements Initializable {
 		}
 		Writer w = new Writer();
 		w.write();
+		isCorrect = true;
+		}catch (Exception e) {
+			
+			alert.setContentText("Sie haben eine ungültige Eingabe getätigt");
+			alert.setHeaderText("Ungültige Eingabe");
+			alert.showAndWait();
+			
+		}
 		/*
 		 * Der Szenenwechsel nach Bestätigung der Eingabe
 		 */

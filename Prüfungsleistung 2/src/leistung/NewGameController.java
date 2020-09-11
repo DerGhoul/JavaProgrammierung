@@ -64,7 +64,9 @@ public class NewGameController implements Initializable {
 			isCorrect = false;
 		}
 		
-		
+		/*
+		 * Speichern des Erscheinungsjahres aus der Eingabe
+		 */
 		
 		try {
 			model.setYearofRelease(newGameInputReleaseDate.getText());
@@ -108,7 +110,9 @@ public class NewGameController implements Initializable {
 		stage.show();
 		
 	}
-	
+	/*
+	 * Änderung der Auswahlmöglichkeiten für Konsolen-/Betriebssystem je nach angebe der Systems
+	 */
 	
 	@FXML public void newGameSystemInputPCSelected(ActionEvent event) {
 		if (newGameSystemInputMG.isSelected() == true) {
@@ -147,7 +151,10 @@ public class NewGameController implements Initializable {
 			
 		}
 	}
-
+	
+	/*
+	 * Speichern des Genres aus der Auswahl des Nutzers
+	 */
 	@SuppressWarnings("null")
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -171,7 +178,9 @@ public class NewGameController implements Initializable {
 		
 		newGameInputGenre.getChildrenUnmodifiable().addAll(cls);
 		
-		
+		/*
+		 * Speichern des Konsolen-/Betriebssystems aus der Auswahl des Nutzers
+		 */
 		ObservableList<ComboBoxListCell<String>> grs = null;
 		
 		
