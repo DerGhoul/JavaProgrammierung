@@ -46,15 +46,19 @@
 		GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
 		
 		<RadioButton fx:id="newGameSystemInputMG"
-		GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>		
+		GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
+			
+		<ComboBox  fx:id="newGameInputConsoleSystem"
+		GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.columnSpan="1" GridPane.rowSpan="1"></ComboBox>
 		
+		<ComboBox  fx:id="newGameInputOperatingSystem"
+		GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.columnSpan="1" GridPane.rowSpan="1"></ComboBox>
+					
 		<Label  fx:id="editGameGameFinished" text="Durchgespielt?"
 		GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="1" GridPane.rowSpan="1"></Label>
 				
 		<CheckBox  fx:id="editGameFinishedInput"
 		GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.columnSpan="1" GridPane.rowSpan="1"></CheckBox>
-		
-		
 		
 		<Button fx:id="newGameEnter" text="Neues Spiel hinzufügen" textAlignment="center" onAction="#newGameEnter"
 		GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="1" GridPane.rowSpan="1"></Button>
