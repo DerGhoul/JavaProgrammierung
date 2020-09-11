@@ -154,11 +154,6 @@ public class MyGamesController implements Initializable {
 		
 	}
 		
-		String title;
-		String genre;
-		String yoR;
-		String system;
-		String playedThrough;
 		
 	}
 
