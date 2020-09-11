@@ -3,9 +3,9 @@ package leistung;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
-import javax.swing.text.html.Option;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -70,14 +70,53 @@ public class MyGamesController implements Initializable {
 		
 		isPlayedColumn.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Option,Boolean>, ObservableValue<Boolean>>() {
 			public ObservableValue<Boolean> call(CellDataFeatures<Option, Boolean> param) {
-				SimpleBooleanProperty booleanProperty = new SimpleBooleanProperty(param.getValue().isSelected());
+				SimpleBooleanProperty booleanProperty = new SimpleBooleanProperty(param.getValue().isPlayed);
 				return booleanProperty;
 			}
 		});
-					
+			
+		Model m = Model.getInstance();
+		Writer writer = new Writer();
+		writer.read();
+		List<String> tableViewItems = Model.getInstance().getTableViewItems();
+		for (String string : tableViewItems) {
+			String[] tokens = string.split(";");
+			m.setTitle(tokens[0]);
+			m.setGenre(tokens[1]);
+			m.setYearofRelease(tokens[2]);
+			m.setSystem(tokens[3]);
+			Boolean b;
+			if (tokens[4] == "true") {
+				b = true;
+			}
+			else {
+				b = false;
+			}
+			m.setPlayedThrough(b);
+		}
+		setGames(tableViewItems);
+		
+		
+		
 	}
 
 
+	public void setGames(List<String> tableViewItems) {
+		Model m = Model.getInstance();
+			
+		String title = m.getTitle();
+		String genre = m.getGenre();
+		String year = m.getYearofRelease();
+		String system = m.getSystem();
+		boolean isPlayed = m.getPlayedThrough();
+		
+		
+		
+		Option option = new Option(title,genre,year,system,isPlayed);
+		gameTable.getItems().add(option);
+		}
+		
+	
 
 
 	@FXML public void deleteSelectedGame(ActionEvent event) {

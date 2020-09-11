@@ -4,7 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
+import java.util.List;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -35,7 +35,7 @@ public class Writer {
 	
 		try (FileWriter fw = new FileWriter(file);
 				BufferedWriter bw = new BufferedWriter(fw)){
-				bw.write(titel + " " + genre + " " + yearOfRelease + " " + system + " " + playedThrough);
+				bw.write(titel + ";" + genre + ";" + yearOfRelease + ";" + system + ";" + playedThrough);
 				}
 			catch (IOException e) {
 				e.printStackTrace();
@@ -43,14 +43,15 @@ public class Writer {
 	}
 	
 	
+	@SuppressWarnings("null")
 	public void read() {
 		
 		File file = new File("C:/Temp/MyGames.txt");
 		
 		Model m =  Model.getInstance();
 	
-		
-		
+		String a="";
+		List<String> tableViewItems = null;
 		
 		try (FileReader fr = new FileReader(file);
 				BufferedReader br = new BufferedReader(fr)){
@@ -74,7 +75,10 @@ public class Writer {
 				if (playedThrough != "true") {
 					m.setPlayedThrough(false);
 				}
+				a = ( titel + ";" + genre + ";" + yearOfRelease + ";" + system + ";" + playedThrough);
+				tableViewItems.add(a);
 			}
+			m.setTableViewItems(tableViewItems);
 				}
 			catch (IOException e) {
 				e.printStackTrace();
