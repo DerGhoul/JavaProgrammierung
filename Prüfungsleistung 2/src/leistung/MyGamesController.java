@@ -89,6 +89,9 @@ public class MyGamesController implements Initializable {
 
 	@FXML public void createNewGame(ActionEvent event) throws IOException {
 		
+		/*
+		 * Szenenwechsel von MyGames auf NewGame auf betätigen des Knopfes
+		 */
 		Scene oldScene = newGame.getScene();
 		Stage stage = (Stage) oldScene.getWindow();
 
