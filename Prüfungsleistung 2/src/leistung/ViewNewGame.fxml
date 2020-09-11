@@ -10,6 +10,9 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.layout.HBox?>
 
+<!-- FXML Datei der Neues Spiel anlegen Oberfläche. Sie kann über die Meine Spiele Oberfläche aufgerufen werden dient dazu neue Spiele hinzuzufügen.
+	Es ist möglich den Namen, das Genre, das Erscheinungsjahr, das System und die Platform anzugeben. -->
+
 <GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="leistung.NewGameController">
 	
 	<children>
