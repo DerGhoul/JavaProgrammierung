@@ -95,24 +95,31 @@ public class NewGameController {
 		stage.show();
 		
 	}
-
+	
+	
 	@FXML public void newGameSystemInputPCSelected(ActionEvent event) {
 		if (newGameSystemInputMG.isSelected() == true) {
 			newGameSystemInputMG.setSelected(false);
+			newGameOS.setVisible(false);
+			newGameCS.setVisible(true);
 		}
 		if(newGameSystemInputConsole.isSelected() == true) {
 			newGameSystemInputConsole.setSelected(false);
-			
+			newGameCS.setVisible(false);
+			newGameOS.setVisible(true);
 		}
 	}
 
 	@FXML public void newGameSystemInputMGSelected() {
 		if (newGameSystemInputPC.isSelected() == true) {
 			newGameSystemInputPC.setSelected(false);
+			newGameOS.setVisible(true);
+			newGameCS.setVisible(false);
 		}
 		if(newGameSystemInputConsole.isSelected() == true) {
 			newGameSystemInputConsole.setSelected(false);
-			
+			newGameOS.setVisible(false);
+			newGameCS.setVisible(true);
 		}
 	}
 
@@ -122,6 +129,8 @@ public class NewGameController {
 		}
 		if(newGameSystemInputMG.isSelected() == true) {
 			newGameSystemInputMG.setSelected(false);
+			
+			
 			
 		}
 	}
