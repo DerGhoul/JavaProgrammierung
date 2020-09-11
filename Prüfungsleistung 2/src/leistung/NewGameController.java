@@ -35,7 +35,6 @@ public class NewGameController {
 	@FXML Button newGameEnter;
 	@FXML Button newGameQuit;
 	
-		
 	/*
 	 * Szenenwechsel nach Betätigung des Hinzufügenknopfes
 	 */
@@ -67,6 +66,7 @@ public class NewGameController {
 		stage.show();
 		
 	}
+	
 	
 	
 	

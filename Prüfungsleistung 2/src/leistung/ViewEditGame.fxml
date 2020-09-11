@@ -39,13 +39,13 @@
 		<TextField fx:id="newGameInputReleaseDate"
 		GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.columnSpan="1" GridPane.rowSpan="1"></TextField>
 		
-		<RadioButton    fx:id="newGameSystemInputConsole"
+		<RadioButton    fx:id="newGameSystemInputConsole" text="Konsolen Spiel"
 		GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
 		
-		<RadioButton fx:id="newGameSystemInputPC"
+		<RadioButton fx:id="newGameSystemInputPC" text="PC Spiel"
 		GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
 		
-		<RadioButton fx:id="newGameSystemInputMG"
+		<RadioButton fx:id="newGameSystemInputMG" text="Mobile Game"
 		GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="1" GridPane.rowSpan="1"></RadioButton>
 			
 		<ComboBox  fx:id="newGameInputConsoleSystem"
