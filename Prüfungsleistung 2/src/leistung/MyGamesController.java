@@ -97,7 +97,7 @@ public class MyGamesController implements Initializable {
 
 		Parent root = FXMLLoader.load(getClass().getResource("ViewNewGame.fxml"));
 		Scene scene = new Scene(root);
-		stage.setTitle("Meine Spiele");
+		stage.setTitle("Neues Spiel anlegen");
 		stage.setScene(scene);
 		stage.show();
 		
