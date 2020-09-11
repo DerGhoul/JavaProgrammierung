@@ -34,7 +34,6 @@ public class Model {
 	String system = new String();
 	ConsoleSystem consoleSystem;
 	OperatingSystem operatingSystem;
-	Boolean playedThrough = null;
 
 
 
@@ -96,7 +95,18 @@ public class Model {
 	
 	
 	public String getSystem() {
-		return system;
+		if (operatingSystem != null) {
+			this.system = operatingSystem.getDescription();
+			return system;
+		}
+		else if (consoleSystem != null) {
+			this.system = consoleSystem.getDescription();
+			return system;
+		}
+		else {
+			return "";
+		}
+		
 	}
 
 	public void setSystem(String system) {
@@ -130,23 +140,12 @@ public class Model {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	public Boolean getPlayedThrough() {
-		return playedThrough;
+		return game.getPlayedThrough();
 	}
 
 	public void setPlayedThrough(Boolean playedThrough) {
-		this.playedThrough = playedThrough;
+		game.setPlayedThrough(playedThrough);
 	}
 	
 	

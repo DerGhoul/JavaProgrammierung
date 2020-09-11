@@ -15,7 +15,7 @@ public class Writer {
 		try (FileWriter fw = new FileWriter(file);
 				BufferedWriter bw = new BufferedWriter(fw)){
 			 
-				bw.write(titel + " " + genre + " " + yearOfRelease + " " + system + " " + playedthrough);
+				//bw.write(titel + " " + genre + " " + yearOfRelease + " " + system + " " + playedthrough);
 				}
 			catch (IOException e) {
 				e.printStackTrace();
