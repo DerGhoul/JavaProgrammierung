@@ -1,10 +1,5 @@
 package leistung;
 
-import java.nio.channels.AcceptPendingException;
-
-import org.omg.CORBA.portable.ValueOutputStream;
-
-import javafx.scene.chart.ValueAxis;
 
 public class Model {
 
@@ -15,7 +10,7 @@ public class Model {
 	
 	private Model(){}
 	
-	public Model getInstance() {
+	public static Model getInstance() {
 		if (model != null) {
 			model = new Model();
 		}
@@ -29,16 +24,16 @@ public class Model {
 	/*
 	 * Attribute
 	 */
-	static Game game = new Game();
-	static Genre genre;
-	static String system = new String();
-	static ConsoleSystem consoleSystem;
-	static OperatingSystem operatingSystem;
+    Game game = new Game();
+    Genre genre;
+	String system = new String();
+	ConsoleSystem consoleSystem;
+	OperatingSystem operatingSystem;
 
 
 
 
-	public static String getTitle() {
+	public  String getTitle() {
 		String title = game.getTitel();
 		return title;
 	}
@@ -52,7 +47,7 @@ public class Model {
 	
 	
 
-	public String getGenre() {
+	public   String getGenre() {
 		return genre.getDescription();
 	}
 
@@ -81,7 +76,7 @@ public class Model {
 	
 	
 	
-	public static String getYearofRelease() {
+	public  String getYearofRelease() {
 		return game.getYearOfRelease()+"";
 	}
 
