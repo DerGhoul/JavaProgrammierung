@@ -71,7 +71,7 @@ public class NewGameController {
 		/*
 		* Szenenwechsel nach Betätigung des Hinzufügenknopfes
 		*/
-		if(isCorrect = true) {
+		if(isCorrect == true) {
 		Scene oldScene = newGameEnter.getScene();
 		Stage stage = (Stage) oldScene.getWindow();
 
