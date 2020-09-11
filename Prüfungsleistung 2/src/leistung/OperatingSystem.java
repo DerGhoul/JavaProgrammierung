@@ -2,8 +2,8 @@ package leistung;
 
 public enum OperatingSystem {
 
-	MS_Windows("Microsoft_Windows"),MacOS("macOS"),Linux("Linux"),
-	IOS("iOS"),Android("Android");
+	MS_Windows("MS_Windows"),MacOS("macOS"),Linux("Linux"),
+	IOS("IOS"),Android("Android");
 	
 	private String description;
 	OperatingSystem(String description) {

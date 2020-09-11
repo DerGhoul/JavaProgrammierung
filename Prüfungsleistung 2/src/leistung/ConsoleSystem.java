@@ -2,7 +2,7 @@ package leistung;
 
 public enum ConsoleSystem {
 	
-	PS4("Playstation_4"),XONE("X_Box_One"),Switch("Nintendo_Switch");
+	PS4("PS4"),XBOXONE("XBOXONE"),Switch("Switch");
 	/*
 	 * Attribute
 	 */
