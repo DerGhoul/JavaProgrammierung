@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Button?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="leistung.MyGamesController" >
+	<MenuBar fx:id="menuBar" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" >
+		<Menu  fx:id="menue" text="Menü" >
+			<Menu fx:id="saveGames" text="Speichern" >
+				<CheckMenuItem fx:id="check"
+			</Menu>
+						
+			<Menu fx:id="deleteAllGames" text="Alle Spiele löschen">
+				
+			</Menu>
+	
+	</MenuBar>
+	<children>
+		<TableView fx:id="gameTable" editable="false" 
+					GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" >
+			<columns>
+			
+				<TableColumn fx:id="titleColumn" >
+					<cellValueFactory>
+						<PropertyValueFactory  property="title" />
+					</cellValueFactory>
+				</TableColumn>
+				
+				
+				<TableColumn fx:id="genreColumn" >
+					<cellValueFactory>
+						<PropertyValueFactory property="genre" />
+					</cellValueFactory>
+				</TableColumn>
+				
+				
+				<TableColumn fx:id="yearColumn" >
+					<cellValueFactory>
+						<PropertyValueFactory property="year" />
+					</cellValueFactory>
+				</TableColumn>
+				
+				
+				<TableColumn fx:id="systemColumn" >
+					<cellValueFactory>
+						<PropertyValueFactory property="system" />
+					</cellValueFactory>
+				</TableColumn>
+				
+				
+				<TableColumn fx:id="isPlayedColumn" >
+					<cellValueFactory>
+						<PropertyValueFactory property="isPlayed" />
+					</cellValueFactory>
+				</TableColumn>
+				
+			</columns>
+		</TableView>
+		
+		<Button fx:id="newGame" text="Neues Spiel anlegen" onAction="#createNewGame"
+				GridPane.columnIndex="0" GridPane.columnSpan="1" GridPane.rowIndex="2"/>
+				
+				
+		<Button fx:id="deleteGame" text="Ausgewähltes Spiel entfernen" onAction="#deleteSelectedGame"
+				GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2"/> 
+		
+	</children>
+</GridPane>
+
