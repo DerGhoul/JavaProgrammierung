@@ -1,5 +1,11 @@
 package leistung;
 
+import java.nio.channels.AcceptPendingException;
+
+import org.omg.CORBA.portable.ValueOutputStream;
+
+import javafx.scene.chart.ValueAxis;
+
 public class Model {
 
 	/*
@@ -24,9 +30,10 @@ public class Model {
 	 * Attribute
 	 */
 	Game game = new Game();
-	Genre genre = new ;
-	String yearofRelease = new String();
+	Genre genre;
 	String system = new String();
+	ConsoleSystem consoleSystem;
+	OperatingSystem operatingSystem;
 	Boolean playedThrough = null;
 
 
@@ -47,11 +54,28 @@ public class Model {
 	
 
 	public String getGenre() {
-		return genre;
+		return genre.getDescription();
 	}
 
 	public void setGenre(String genre) {
-		this.genre = genre;
+		if (genre == "Action") {
+			this.genre = Genre.Action;
+		}
+		if (genre == "ActionAdventure") {
+			this.genre = Genre.ActionAdventure;
+		}
+		if (genre == "RPG") {
+			this.genre = Genre.RPG;
+		}
+		if (genre == "Sport") {
+			this.genre = Genre.Sport;
+		}
+		if (genre == "Strategy") {
+			this.genre = Genre.Strategy;
+		}
+		if (genre == "Simulation") {
+			this.genre = Genre.Simulation;
+		}
 	}
 
 	
@@ -59,21 +83,64 @@ public class Model {
 	
 	
 	public String getYearofRelease() {
-		return yearofRelease;
+		return game.getYearOfRelease()+"";
 	}
 
 	public void setYearofRelease(String yearofRelease) {
-		this.yearofRelease = yearofRelease;
+		
+		game.setYearOfRelease(Integer.parseInt(yearofRelease));
 	}
 
+	
+	
+	
+	
 	public String getSystem() {
 		return system;
 	}
 
 	public void setSystem(String system) {
-		this.system = system;
+		if (system == "MS_Windows") {
+			this.operatingSystem = OperatingSystem.MS_Windows;
+		}
+		if (system == "MacOS") {
+			this.operatingSystem = OperatingSystem.MacOS;
+		}
+		if (system == "Linux") {
+			this.operatingSystem = OperatingSystem.Linux;
+		}
+		if (system == "IOS") {
+			this.operatingSystem = OperatingSystem.IOS;
+		}
+		if (system == "Android") {
+			this.operatingSystem = OperatingSystem.Android;
+		}
+		
+		if (system == "PS4") {
+			this.consoleSystem = ConsoleSystem.PS4;
+		}
+		if (system == "XBOXONE") {
+			this.consoleSystem = ConsoleSystem.XBOXONE;
+		}
+		if (system == "Switch") {
+			this.consoleSystem = ConsoleSystem.Switch;
+		}
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public Boolean getPlayedThrough() {
 		return playedThrough;
 	}
