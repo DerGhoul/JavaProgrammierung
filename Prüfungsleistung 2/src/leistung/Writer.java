@@ -68,8 +68,11 @@ public class Writer {
 				m.setGenre(genre);
 				m.setYearofRelease(yearOfRelease);
 				m.setSystem(system);
-				if (playedThrough = "true") {
-				m.setPlayedThrough(playedThrough);
+				if (playedThrough != "false") {
+					m.setPlayedThrough(true);
+				}
+				if (playedThrough != "true") {
+					m.setPlayedThrough(false);
 				}
 			}
 				}
