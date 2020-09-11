@@ -1,5 +1,6 @@
 package leistung;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Model {
@@ -30,18 +31,18 @@ public class Model {
 	String system = new String();
 	ConsoleSystem consoleSystem;
 	OperatingSystem operatingSystem;
-	List<String> tableViewItems;
+	ArrayList<String> tableViewItems;
 	
 	
 
 
 
 
-	public List<String> getTableViewItems() {
+	public ArrayList<String> gettableViewItems() {
 		return tableViewItems;
 	}
 
-	public void setTableViewItems(List<String> tableViewItems) {
+	public void setTableViewItems(ArrayList<String> tableViewItems) {
 		this.tableViewItems = tableViewItems;
 	}
 

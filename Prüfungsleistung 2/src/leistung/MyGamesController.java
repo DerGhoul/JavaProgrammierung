@@ -3,6 +3,7 @@ package leistung;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -47,8 +48,8 @@ public class MyGamesController implements Initializable {
 	@FXML CheckMenuItem editableCheckMenuItem;
 	
 	Writer writer = new Writer();
-	
-	
+
+
 	
 	
 	
@@ -77,24 +78,28 @@ public class MyGamesController implements Initializable {
 			
 		Model m = Model.getInstance();
 		Writer writer = new Writer();
-		writer.read();
-		List<String> tableViewItems = Model.getInstance().getTableViewItems();
-		for (String string : tableViewItems) {
-			String[] tokens = string.split(";");
-			m.setTitle(tokens[0]);
-			m.setGenre(tokens[1]);
-			m.setYearofRelease(tokens[2]);
-			m.setSystem(tokens[3]);
-			Boolean b;
-			if (tokens[4] == "true") {
-				b = true;
+		
+		if (m.gettableViewItems() != null) {
+			writer.read();
+			ArrayList<String> tableViewItems = Model.getInstance().gettableViewItems();
+			for (String string : tableViewItems) {
+				String[] tokens = string.split(";");
+				m.setTitle(tokens[0]);
+				m.setGenre(tokens[1]);
+				m.setYearofRelease(tokens[2]);
+				m.setSystem(tokens[3]);
+				Boolean b;
+				if (tokens[4] == "true") {
+					b = true;
+				}
+				else {
+					b = false;
+				}
+				m.setPlayedThrough(b);
 			}
-			else {
-				b = false;
-			}
-			m.setPlayedThrough(b);
+			setGames(tableViewItems);
 		}
-		setGames(tableViewItems);
+		
 		
 		
 		

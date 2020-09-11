@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -51,7 +52,7 @@ public class Writer {
 		Model m =  Model.getInstance();
 	
 		String a="";
-		List<String> tableViewItems = null;
+		ArrayList<String> tableViewItems = null;
 		
 		try (FileReader fr = new FileReader(file);
 				BufferedReader br = new BufferedReader(fr)){
