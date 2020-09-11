@@ -1,5 +1,6 @@
 package leistung;
 
+import java.util.List;
 
 public class Model {
 
@@ -29,6 +30,9 @@ public class Model {
 	String system = new String();
 	ConsoleSystem consoleSystem;
 	OperatingSystem operatingSystem;
+	List<String> tableViewItems = new List<>(); 
+	
+	
 
 
 

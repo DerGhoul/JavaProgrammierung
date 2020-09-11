@@ -27,7 +27,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.RadioMenuItem;
 
 public class MyGamesController implements Initializable {
 
@@ -111,7 +110,9 @@ public class MyGamesController implements Initializable {
 
 
 
-	@FXML public void saveGames(ActionEvent event) {}
+	@FXML public void saveGames(ActionEvent event) {
+		
+	}
 
 	 
 	
