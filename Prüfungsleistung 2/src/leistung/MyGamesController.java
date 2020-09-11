@@ -43,6 +43,8 @@ public class MyGamesController implements Initializable {
 	@FXML TableColumn<Option, Boolean> 	isPlayedColumn;
 	@FXML Button newGame;
 	@FXML Button deleteGame;
+	@FXML CheckMenuItem check;
+	@FXML CheckMenuItem editableCheckMenuItem;
 	
 	
 	
@@ -100,6 +102,16 @@ public class MyGamesController implements Initializable {
 		stage.show();
 		
 	}
+
+
+
+
+	@FXML public void deleteGames(ActionEvent event) {}
+
+
+
+
+	@FXML public void saveGames(ActionEvent event) {}
 
 	 
 	
