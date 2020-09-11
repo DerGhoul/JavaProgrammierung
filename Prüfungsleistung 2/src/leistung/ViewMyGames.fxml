@@ -13,6 +13,8 @@
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.MenuItem?>
 
+<!-- FXML Datei der Meine Spiele Oberfläche. Sie dient zur allgemeinen Verwaltung der Spiele. Über sie können neue Spiele hinzugefügt werden und bereits vorhandene Spiele geändert oder gelöscht weredn  -->
+
 <GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="leistung.MyGamesController" >
 	<children>
 		

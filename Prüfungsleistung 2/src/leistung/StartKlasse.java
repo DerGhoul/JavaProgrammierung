@@ -8,6 +8,10 @@ import javafx.stage.Stage;
 
 public class StartKlasse extends Application {
 	
+	/*
+	 * Methode zum erstmaligen aufrufen der Meine Spiele Oberfläche
+	 */
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
