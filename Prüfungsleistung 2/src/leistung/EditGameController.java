@@ -49,7 +49,18 @@ public class EditGameController {
 		
 	}
 
-	@FXML public void newGameEnter(ActionEvent event) {}
+	@FXML public void newGameEnter(ActionEvent event) throws IOException  {
+		
+		Scene oldScene = newGameQuit.getScene();
+		Stage stage = (Stage) oldScene.getWindow();
+
+		Parent root = FXMLLoader.load(getClass().getResource("ViewMyGames.fxml"));
+		Scene scene = new Scene(root);
+		stage.setTitle("Meine Spiele");
+		stage.setScene(scene);
+		stage.show();
+		
+	}
 	
 	
 	
