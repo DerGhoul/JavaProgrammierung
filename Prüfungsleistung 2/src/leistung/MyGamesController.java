@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.Menu;
 import javafx.scene.control.CheckMenuItem;
@@ -31,10 +32,9 @@ import javafx.scene.control.RadioMenuItem;
 public class MyGamesController implements Initializable {
 
 	@FXML MenuBar menuBar;
-	@FXML Menu saveGames;
+	@FXML MenuItem saveGames;
 	@FXML Menu menue;
-	@FXML CheckMenuItem check;
-	@FXML Menu deleteAllGames;
+	@FXML MenuItem deleteAllGames;
 	@FXML TableView<Option> gameTable;
 	@FXML TableColumn<Option, Integer> 	titleColumn;
 	@FXML TableColumn<Option, String> 	genreColumn;
@@ -43,10 +43,6 @@ public class MyGamesController implements Initializable {
 	@FXML TableColumn<Option, Boolean> 	isPlayedColumn;
 	@FXML Button newGame;
 	@FXML Button deleteGame;
-	@FXML CheckMenuItem editableCheckMenuItem;
-	@FXML RadioMenuItem noConversionRadioMenuItem;
-	@FXML RadioMenuItem toLowerCaseConversionRadioMenuItem;
-	@FXML RadioMenuItem toUpperCaseConversionRadioMenuItem;
 	
 	
 	
@@ -82,7 +78,9 @@ public class MyGamesController implements Initializable {
 
 
 
-	@FXML public void deleteSelectedGame(ActionEvent event) {}
+	@FXML public void deleteSelectedGame(ActionEvent event) {
+		
+	}
 
 
 

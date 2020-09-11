@@ -18,21 +18,22 @@
 		
 		<MenuBar fx:id="menuBar" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" >
 			<Menu fx:id="menue" text="Menü">
-				<Menu fx:id="saveGames" text="Speichern">
-					<CheckMenuItem fx:id="check"
+				<MenuItem Menu fx:id="saveGames" text="Speichern"/>
+				<MenuItem  fx:id="deleteAllGames" text="Alle Spiele löschen"/>
+					<!--  CheckMenuItem fx:id="check"
 						text="sichtbar" selected="true" />
 					<SeparatorMenuItem  />
 					<CheckMenuItem   fx:id="editableCheckMenuItem"
 						text="editierbar" selected="true" />
 				</Menu>
-				<Menu  fx:id="deleteAllGames" text="Alle Spiele löschen">
+				
 					<RadioMenuItem fx:id="noConversionRadioMenuItem"
 						text="keine Konvertierung" selected="true" />
 					<RadioMenuItem fx:id="toLowerCaseConversionRadioMenuItem"
 						text="Kleinbuchstaben-Konvertierung"  />
 					<RadioMenuItem fx:id="toUpperCaseConversionRadioMenuItem"
 						text="Großbuchstaben-Konvertierung" />
-				</Menu>			
+				</Menu-->			
 			</Menu>
 		</MenuBar>
 	
