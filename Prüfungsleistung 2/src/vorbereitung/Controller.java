@@ -37,7 +37,7 @@ public class Controller {
 
 	@FXML TextField input3;
 	
-	JOptionPane jOptionPane = new JOptionPane(); 
+	
 	Alert alert = new Alert(AlertType.WARNING);
 	
 	
